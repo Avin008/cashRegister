@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>@heading</h2>
+    <div class="container-center">
+      <h2 class="heading">Cash Register Mananger</h2>
+    </div>
+    <hr />
+    <h2>@about</h2>
+    <div class="container-center">
+      <p id="About">
+        Enter the bill amount and cash given by the customer and know minimum
+        number of notes to return.
+      </p>
+    </div>
+
+    <hr />
+    <h2>@input</h2>
+    <div class="bill-container container-center">
+      <label for="bill-amount">Bill Amount: </label>
+      <input type="text" id="bill-amount" />
+    </div>
+    <div class="cash-container container-center hidden">
+      <label for="cash-given">Cash Given: </label>
+      <input type="text" id="cash-given" />
+    </div>
+    <hr />
+    <h2>@Next Button</h2>
+    <div class="nextbtn-container container-center hidden-after">
+      <button id="next-btn">Next</button>
+    </div>
+    <div class="checkbtn-container container-center hidden">
+      <button id="check-btn">Check</button>
+    </div>
+    <hr />
+    <h2>@Error Msg</h2>
+    <div class="error-container container-center">
+      <p id="display-msg"></p>
+    </div>
+    <hr />
+    <h2>@Table</h2>
+    <div class="table container-center hidden">
+      <table class="hidden" border="1px">
+        <th>No. Of Notes</th>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <td class="num-of-notes"></td>
+        <tr>
+          <th>Notes</th>
+          <td class="notes"></td>
+          <td class="notes"></td>
+          <td class="notes"></td>
+          <td class="notes"></td>
+          <td class="notes"></td>
+          <td class="notes"></td>
+          <td class="notes"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

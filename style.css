@@ -1,0 +1,25 @@
+:root {
+  --primary: #272727;
+}
+
+.container-center {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+body {
+  color: white;
+  background-color: var(--primary);
+}
+
+td {
+  padding: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+.hide {
+  display: none;
+}
