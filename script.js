@@ -28,7 +28,7 @@ function fillNotes() {
 }
 
 checkBtn.addEventListener("click", function () {
-  if (parseInt(cashGiven.value) <= parseInt(billAmount.value)) {
+  if (parseInt(cashGiven.value) < parseInt(billAmount.value)) {
     displayMsg.innerText = "Cash Given cannot be less than bill amount";
   } else {
     let cashToBeReturned =

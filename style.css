@@ -6,7 +6,7 @@
 
 .container-center {
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin: auto;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 td {
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 input {
@@ -36,11 +36,18 @@ table {
 
 label {
   display: block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
   font-weight: bold;
 }
 
 #about {
-  max-width: 500px;
   margin: auto;
+}
+
+#display-msg {
+  font-weight: bold;
+}
+
+button {
+  padding: 0.5rem 1rem;
 }
