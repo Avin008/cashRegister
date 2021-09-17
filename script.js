@@ -28,13 +28,17 @@ function fillNotes() {
 }
 
 checkBtn.addEventListener("click", function () {
-  if (parseInt(cashGiven.value) < parseInt(billAmount.value)) {
-    displayMsg.innerText = "Cash Given cannot be less than bill amount";
+  if (isNaN(parseInt(cashGiven.value))) {
+    displayMsg.innerText = "Cash Given Invalid";
   } else {
-    let cashToBeReturned =
-      parseInt(cashGiven.value) - parseInt(billAmount.value);
-    displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
-    calculateChange(cashToBeReturned);
+    if (parseInt(cashGiven.value) < parseInt(billAmount.value)) {
+      displayMsg.innerText = "Cash Given cannot be less than bill amount";
+    } else {
+      let cashToBeReturned =
+        parseInt(cashGiven.value) - parseInt(billAmount.value);
+      displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
+      calculateChange(cashToBeReturned);
+    }
   }
 });
 
