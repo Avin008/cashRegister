@@ -47,8 +47,9 @@ function unhideDisplay() {
 
 function checkInput() {
   if (isNaN(parseInt(billAmount.value)) || parseInt(billAmount.value) < 0) {
-    displayMsg.innerText = "invalid input";
+    displayMsg.innerText = "Enter valid bill amount";
   } else {
+    displayMsg.innerText = "";
     unhideDisplay();
   }
 }
