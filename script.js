@@ -27,24 +27,9 @@ function fillNotes() {
   }
 }
 
-// checkBtn.addEventListener("click", function () {
-//   if (!cashGiven.value) {
-//     displayMsg.innerText = "Cash Given cannot be empty";
-//   } else {
-//     if (Number(cashGiven.value) < Number(billAmount.value)) {
-//       displayMsg.innerText = "Cash Given cannot be less than bill amount";
-//     } else {
-//       let cashToBeReturned =
-//         parseInt(cashGiven.value) - parseInt(billAmount.value);
-//       displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
-//       calculateChange(cashToBeReturned);
-//     }
-//   }
-// });
-
 checkBtn.addEventListener("click", function () {
   if (!cashGiven.value || Number(cashGiven.value) < 1) {
-    displayMsg.innerText = "Enter valid cash Given Amount";
+    displayMsg.innerText = "Enter valid Cash Given Amount";
   } else {
     if (Number(cashGiven.value) === Number(billAmount.value)) {
       displayMsg.innerText = "no change should be returned";
@@ -55,7 +40,8 @@ checkBtn.addEventListener("click", function () {
         displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
         calculateChange(cashToBeReturned);
       } else {
-        displayMsg.innerText = "cashgiven cannot be less than bill amount";
+        displayMsg.innerText =
+          "Cash Given Amount cannot be less than Bill Amount";
       }
     }
   }
