@@ -27,17 +27,36 @@ function fillNotes() {
   }
 }
 
+// checkBtn.addEventListener("click", function () {
+//   if (!cashGiven.value) {
+//     displayMsg.innerText = "Cash Given cannot be empty";
+//   } else {
+//     if (Number(cashGiven.value) < Number(billAmount.value)) {
+//       displayMsg.innerText = "Cash Given cannot be less than bill amount";
+//     } else {
+//       let cashToBeReturned =
+//         parseInt(cashGiven.value) - parseInt(billAmount.value);
+//       displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
+//       calculateChange(cashToBeReturned);
+//     }
+//   }
+// });
+
 checkBtn.addEventListener("click", function () {
-  if (isNaN(parseInt(cashGiven.value))) {
-    displayMsg.innerText = "Cash Given Invalid";
+  if (!cashGiven.value || Number(cashGiven.value) < 1) {
+    displayMsg.innerText = "Enter valid cash Given Amount";
   } else {
-    if (parseInt(cashGiven.value) < parseInt(billAmount.value)) {
-      displayMsg.innerText = "Cash Given cannot be less than bill amount";
+    if (Number(cashGiven.value) === Number(billAmount.value)) {
+      displayMsg.innerText = "no change should be returned";
     } else {
-      let cashToBeReturned =
-        parseInt(cashGiven.value) - parseInt(billAmount.value);
-      displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
-      calculateChange(cashToBeReturned);
+      if (Number(cashGiven.value) > Number(billAmount.value)) {
+        let cashToBeReturned =
+          parseInt(cashGiven.value) - parseInt(billAmount.value);
+        displayMsg.innerText = `cash to be returned ${cashToBeReturned}`;
+        calculateChange(cashToBeReturned);
+      } else {
+        displayMsg.innerText = "cashgiven cannot be less than bill amount";
+      }
     }
   }
 });
@@ -50,7 +69,7 @@ function unhideDisplay() {
 }
 
 function checkInput() {
-  if (isNaN(parseInt(billAmount.value)) || parseInt(billAmount.value) < 0) {
+  if (!billAmount.value || Number(billAmount.value) < 1) {
     displayMsg.innerText = "Enter valid bill amount";
   } else {
     displayMsg.innerText = "";

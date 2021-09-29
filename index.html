@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div class="container-center">
-      <h2 class="heading">Cash Register Manager</h2>
+    <div class="icon">
+      <a id="icon" href="https://github.com/Avin008/cashRegister"
+        ><i class="fab fa-github"></i
+      ></a>
     </div>
-    <hr />
+    <div class="container-center">
+      <h1 class="heading">Cash Register Manager</h1>
+    </div>
 
     <div class="container-center">
       <p id="about">
@@ -19,8 +29,6 @@
         number of notes to return.
       </p>
     </div>
-
-    <hr />
 
     <div class="bill-container container-center">
       <label for="bill-amount">Bill Amount: </label>
@@ -30,7 +38,6 @@
       <label for="cash-given">Cash Given: </label>
       <input type="number" id="cash-given" />
     </div>
-    <hr />
 
     <div class="nextbtn-container container-center hidden-after">
       <button id="next-btn">Next</button>
@@ -38,7 +45,6 @@
     <div class="checkbtn-container container-center hidden">
       <button id="check-btn">Check</button>
     </div>
-    <hr />
 
     <div class="error-container container-center">
       <p id="display-msg"></p>
@@ -46,7 +52,7 @@
     <hr />
 
     <div class="table container-center hidden">
-      <table class="hidden" border="1px">
+      <table style="border-color: purple" class="hidden" border="1px">
         <th>No. Of Notes</th>
         <td class="num-of-notes"></td>
         <td class="num-of-notes"></td>
