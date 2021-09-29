@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
-  --primary: white;
+  --primary: purple;
 }
 
 .container-center {
@@ -12,7 +12,7 @@
 
 body {
   color: black;
-  background-color: var(--primary);
+  background-color: white;
   font-family: "Open Sans", sans-serif;
   margin: auto;
 }
@@ -24,7 +24,7 @@ td {
 input {
   padding: 0.5rem;
   border-style: none;
-  border: 2px solid purple;
+  border: 2px solid var(--primary);
   border-radius: 1rem;
 }
 
@@ -56,19 +56,19 @@ label {
 button {
   padding: 0.5rem 1rem;
   border-style: none;
-  background-color: purple;
+  background-color: var(--primary);
   color: white;
   border-radius: 1rem;
   font-weight: bold;
 }
 
 h1 {
-  color: purple;
+  color: var(--primary);
 }
 
 .fab {
   font-size: 3rem;
-  color: purple;
+  color: var(--primary);
 }
 
 .icon {
