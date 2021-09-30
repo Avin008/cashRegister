@@ -1,6 +1,6 @@
 # cash-register-app
 
-A cash register web app that can tell the user the amount of change to return/receive after entering the bill amount and cash given by the customer/to the shopkeeper - (mark 10)
+A cash register web app that can tell the user the amount of change to return after entering the bill amount and cash given. (mark 10)
 
 ## Technologies used:
 
