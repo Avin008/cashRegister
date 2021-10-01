@@ -28,12 +28,8 @@ function fillNotes() {
 }
 
 checkBtn.addEventListener("click", function () {
-  if (
-    !cashGiven.value ||
-    Number(cashGiven.value) < 1 ||
-    Number(billAmount.value) < 1
-  ) {
-    displayMsg.innerText = "Enter valid Amount";
+  if (!cashGiven.value || Number(cashGiven.value) < 1) {
+    displayMsg.innerText = "Enter valid Cash Given Amount";
   } else {
     if (Number(cashGiven.value) === Number(billAmount.value)) {
       displayMsg.innerText = "no change should be returned";
