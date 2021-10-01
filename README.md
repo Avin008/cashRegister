@@ -11,6 +11,7 @@ A cash register web app that can tell the user the amount of change to be return
 ## How to use?
 
 It's super simple to use, it's a 4 step process.
+
 Step. 1 - Enter the bill Amount.
 Step. 2 - Click on the Next button.
 Step. 3 - Enter the Cash Given Amount.
