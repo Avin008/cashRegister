@@ -9,23 +9,21 @@ const btnContainer = document.querySelector(".nextbtn-container");
 const displayMsg = document.querySelector("#display-msg");
 const notes = [2000, 500, 100, 20, 10, 5, 1];
 
-hideBefore();
-fillNotes();
-
-nextBtn.addEventListener("click", function () {
-  checkInput();
-});
-
-function hideBefore() {
+const hideBefore = () => {
   hideDisplay.classList.add("hide");
   checkBtn.classList.add("hide");
-}
+};
 
-function fillNotes() {
+const fillNotes = () => {
   for (let x = 0; x < notes.length; x++) {
     availableNotes[x].innerText = notes[x];
   }
-}
+};
+
+hideBefore();
+fillNotes();
+
+nextBtn.addEventListener("click", () => checkInput());
 
 checkBtn.addEventListener("click", function () {
   if (cashGiven.value && billAmount.value) {
@@ -50,32 +48,32 @@ checkBtn.addEventListener("click", function () {
   }
 });
 
-function unhideDisplay() {
+const unhideDisplay = () => {
   hideDisplay.classList.remove("hide");
   checkBtn.classList.remove("hide");
   nextBtn.classList.add("hide");
   btnContainer.classList.add("hide");
-}
+};
 
-function checkInput() {
+const checkInput = () => {
   if (!billAmount.value || Number(billAmount.value) < 1) {
     displayMsg.innerText = "Enter valid bill amount";
   } else {
     displayMsg.innerText = "";
     unhideDisplay();
   }
-}
+};
 
-function calculateChange(change) {
+const calculateChange = (change) => {
   for (let x = 0; x < notes.length; x++) {
     let numNotes = Math.trunc(change / notes[x]);
     change %= notes[x];
     noOfNotes[x].innerText = numNotes;
   }
-}
+};
 
-function noNotes() {
+const noNotes = () => {
   for (let x = 0; x < noOfNotes.length; x++) {
     noOfNotes[x].innerText = "0";
   }
-}
+};
